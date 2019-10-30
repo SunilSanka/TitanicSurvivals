@@ -202,6 +202,6 @@ public class Titanic {
 		// Saving Random Forest
 		Dataset<Row> results = predictionsRf.select(col("PassengerId"),	col("prediction").as("Survived").cast(DataTypes.IntegerType));
 		results.show();
-		results.write().option("header", "true").csv("C:\\Personal\\PGPBD\\Titanic\\results\\gender_submission.csv");
+		results.write().option("header", "true").csv("C:\\Titanic\\results\\gender_submission.csv");
 	}
 }
